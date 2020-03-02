@@ -40,7 +40,7 @@ namespace MVCLaboratorio.Controllers
                                   CommandType.StoredProcedure, 
                                   parametros);
 
-            //accion INDEX del conrolador VIDEO
+            //accion INDEX del controlador VIDEO
             return RedirectToAction("Index", "Video");
         }
 
@@ -63,7 +63,15 @@ namespace MVCLaboratorio.Controllers
         [HttpPost]
         public ActionResult Delete(int idVideo)
         {
-            return View();
+            List<SqlParameter> parametros = new List<SqlParameter>();
+            parametros.Add(new SqlParameter("@idVideo", idVideo));
+            BaseHelper.ejecutarSentencia("sp_video_eliminar",
+                                 CommandType.StoredProcedure,
+                                 parametros);
+
+            //accion INDEX del conrolador VIDEO
+            return RedirectToAction("Index", "Video");
+            
         }
 
     }

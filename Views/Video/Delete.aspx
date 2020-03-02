@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head runat="server">
-    <title>Registrar Video</title>
+    <title>Eliminar Video</title>
 
     <meta charset="UTF-8">
     <meta name="description" content="CRUD Video ASP.NET MVC 2.0">
@@ -12,31 +12,20 @@
     <meta name="author" content="Ana Karen Lopez">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-   
     <link href="../../Content/Site.css" rel="stylesheet" type="text/css" />
+
 </head>
 <body>
-    <form action="/Video/Create" method="post">
-        <fieldset>
-        <legend>Datos del Video</legend>
+    <form action="/Video/Delete" method="post">
+    <fieldset>
+    
+     <label for="idVideo">id Video</label>
+     <input type="text" name="idVideo"/> 
 
-        <label for="idVideo">idVideo</label>
-        <input type="text" name="idVideo"/> 
+     <input type="submit" value="Eliminar"/> 
 
-         <label for="titulo">Titulo</label>
-        <input type="text" name="titulo"/> 
-
-         <label for="repro">Reproducciones</label>
-        <input type="text" name="repro"/> 
-
-         <label for="url">URL</label>
-        <input type="text" name="url"/> 
-
-         
-        <input type="submit" value="Registrar"/> 
-
-
-        </fieldset>
+    </fieldset>
     </form>
+
 </body>
 </html>
