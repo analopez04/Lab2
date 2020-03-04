@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head runat="server">
-    <title>Pagina Princi´pal</title>
+    <title>Pagina Principal</title>
 </head>
 <body>
     <h1>Menu de opciones:</h1>

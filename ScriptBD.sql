@@ -30,4 +30,29 @@ begin
 	DELETE FROM video WHERE idVideo=@idVideo
 end
 
+CREATE PROCEDURE sp_video_actualizar
+	@idVideo int,
+	@titulo varchar(100),
+	@repro int,
+	@url varchar(100)
+as
+begin
+	UPDATE video 
+	SET idVideo=@idVideo,
+	titulo=@titulo,
+	repro=@repro,
+	url=@url
+	WHERE idVideo=@idVideo
+end
+
+CREATE PROCEDURE sp_video_mostrar
+	@idVideo int,
+	@titulo varchar(100),
+	@repro int,
+	@url varchar(100)
+as
+begin
+	SELECT * FROM video;
+end
+
 select * from video

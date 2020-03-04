@@ -18,6 +18,9 @@ namespace MVCLaboratorio.Controllers
         //index solo muestra
         public ActionResult Index()
         {
+            List<SqlParameter> parametros = new List<SqlParameter>();
+            ViewData["video"] = BaseHelper.ejecutarConsulta("SELECT * FROM video", CommandType.Text, parametros); 
+       
             return View();
         }
 
@@ -82,7 +85,7 @@ namespace MVCLaboratorio.Controllers
                                  CommandType.StoredProcedure,
                                  parametros);
 
-            //accion INDEX del conrolador VIDEO
+            //accion INDEX del controlador VIDEO
             return RedirectToAction("Index", "Video");
             
         }
